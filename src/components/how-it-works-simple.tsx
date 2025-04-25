@@ -107,7 +107,7 @@ export function HowItWorksSimple() {
                   : 'opacity-0 translate-y-16'
               }`}
             >
-              <StepCard step={steps[0]} number={1} />
+              <StepCard step={steps[0]} />
             </div>
             <div 
               className={`col-span-2 transition-all duration-700 delay-[200ms] ${
@@ -116,7 +116,7 @@ export function HowItWorksSimple() {
                   : 'opacity-0 translate-y-16'
               }`}
             >
-              <StepCard step={steps[1]} number={2} />
+              <StepCard step={steps[1]} />
             </div>
             <div 
               className={`col-span-2 transition-all duration-700 delay-[400ms] ${
@@ -125,7 +125,7 @@ export function HowItWorksSimple() {
                   : 'opacity-0 translate-y-16'
               }`}
             >
-              <StepCard step={steps[2]} number={3} />
+              <StepCard step={steps[2]} />
             </div>
           </div>
           
@@ -142,7 +142,7 @@ export function HowItWorksSimple() {
                   : 'opacity-0 translate-y-16'
               }`}
             >
-              <StepCard step={steps[3]} number={4} />
+              <StepCard step={steps[3]} />
             </div>
             <div 
               className={`col-span-2 transition-all duration-700 delay-[400ms] ${
@@ -151,7 +151,7 @@ export function HowItWorksSimple() {
                   : 'opacity-0 translate-y-16'
               }`}
             >
-              <StepCard step={steps[4]} number={5} />
+              <StepCard step={steps[4]} />
             </div>
             <div className="col-span-1"></div> {/* Empty column for spacing */}
           </div>
@@ -172,7 +172,7 @@ export function HowItWorksSimple() {
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <MobileStepCard step={step} number={index + 1} />
+              <MobileStepCard step={step} />
             </div>
           ))}
         </div>
@@ -182,7 +182,7 @@ export function HowItWorksSimple() {
 }
 
 // Card component for each step (desktop version)
-function StepCard({ step, number }: { step: typeof steps[0], number: number }) {
+function StepCard({ step }: { step: typeof steps[0] }) {
   return (
     <div className="rounded-xl p-6 h-full">
       <div className="flex flex-col items-start">
@@ -197,7 +197,7 @@ function StepCard({ step, number }: { step: typeof steps[0], number: number }) {
 }
 
 // Mobile optimized card component - simplified
-function MobileStepCard({ step, number }: { step: typeof steps[0], number: number }) {
+function MobileStepCard({ step }: { step: typeof steps[0] }) {
   return (
     <div className="flex flex-col">
       <div className="w-12 h-12 rounded-full bg-violet-a2 flex items-center justify-center mb-4">
