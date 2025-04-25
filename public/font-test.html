@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inter Font Test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --violet-9: #673cdd;
+      --gray-1: #02010c;
+      --gray-10: #776ec6;
+      --gray-3: #1f1d37;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--gray-1);
+      color: white;
+      line-height: 1.4;
+      letter-spacing: -0.015em;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      font-size: 18px;
+      color: var(--gray-10);
+      margin-bottom: 2rem;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background-color: var(--violet-9);
+      color: white;
+      border-radius: 0.75rem;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      cursor: pointer;
+    }
+    
+    .card {
+      padding: 1.5rem;
+      margin-top: 2rem;
+      background-color: rgba(0,0,0,0.2);
+      border: 1px solid var(--gray-3);
+      border-radius: 0.75rem;
+    }
+    
+    .card h2 {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Inter Font Test Page</h1>
+  <p>This is a test page to see how the Inter font from Google Fonts renders with tight tracking and custom line height.</p>
+  
+  <div class="button">Test Button</div>
+  
+  <div class="card">
+    <h2>Test Card Heading</h2>
+    <p>This is an example paragraph inside a card to test how the Inter font renders at different sizes with custom letter spacing and line height.</p>
+  </div>
+</body>
+</html> 

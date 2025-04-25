@@ -1,26 +1,185 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-sans: 'Inter', sans-serif;
+  --radius: 0.75rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Add Inter font optimizations */
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    transition: background-color 0.5s ease-in-out;
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.dark, .dark-theme, :is(.dark, .dark-theme) :where(.radix-themes:not(.light, .light-theme)) {
+  --color-background: #02010c;
+  
+  /* Violet palette */
+  --violet-1: #100f1e;
+  --violet-2: #171529;
+  --violet-3: #251d4d;
+  --violet-4: #312168;
+  --violet-5: #3a2977;
+  --violet-6: #443486;
+  --violet-7: #52429d;
+  --violet-8: #6651c0;
+  --violet-9: #673cdd;
+  --violet-10: #5b28cc;
+  --violet-11: #b2a7ff;
+  --violet-12: #dfddff;
+
+  --violet-a1: #0000fe0e;
+  --violet-a2: #4c39fd1a;
+  --violet-a3: #6040fd41;
+  --violet-a4: #683dfd5e;
+  --violet-a5: #7049fd6e;
+  --violet-a6: #7858fd7e;
+  --violet-a7: #8065ff96;
+  --violet-a8: #8568ffbc;
+  --violet-a9: #7644ffdb;
+  --violet-a10: #6f2efec9;
+  --violet-a11: #b2a7ff;
+  --violet-a12: #dfddff;
+
+  --violet-contrast: #fff;
+  --violet-surface: #1d194180;
+  --violet-indicator: #673cdd;
+  --violet-track: #673cdd;
+  
+  /* Gray palette */
+  --gray-1: #02010c;
+  --gray-2: #151325;
+  --gray-3: #1f1d37;
+  --gray-4: #272348;
+  --gray-5: #2e2956;
+  --gray-6: #383165;
+  --gray-7: #453d7e;
+  --gray-8: #5d52a7;
+  --gray-9: #6a60b7;
+  --gray-10: #776ec6;
+  --gray-11: #aea8fe;
+  --gray-12: #edecfd;
+
+  --gray-a1: #03020125;
+  --gray-a2: #c4b9f919;
+  --gray-a3: #aaa4fc2c;
+  --gray-a4: #9a8dfc3e;
+  --gray-a5: #9486fd4d;
+  --gray-a6: #9784fd5d;
+  --gray-a7: #9281fe77;
+  --gray-a8: #9181ffa2;
+  --gray-a9: #9689ffb3;
+  --gray-a10: #9b90ffc3;
+  --gray-a11: #afa9fffe;
+  --gray-a12: #efeefffd;
+
+  --gray-contrast: #FFFFFF;
+  --gray-surface: rgba(0, 0, 0, 0.05);
+  --gray-indicator: #6a60b7;
+  --gray-track: #6a60b7;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .dark, .dark-theme {
+      /* Violet P3 colors */
+      --violet-1: oklch(17.8% 0.0322 287.6);
+      --violet-2: oklch(20.9% 0.0394 287.6);
+      --violet-3: oklch(27% 0.0843 287.6);
+      --violet-4: oklch(31.3% 0.119 287.6);
+      --violet-5: oklch(34.9% 0.1267 287.6);
+      --violet-6: oklch(39.1% 0.131 287.6);
+      --violet-7: oklch(44.5% 0.1422 287.6);
+      --violet-8: oklch(51.5% 0.1669 287.6);
+      --violet-9: oklch(50.9% 0.2276 287.6);
+      --violet-10: oklch(46% 0.2276 287.6);
+      --violet-11: oklch(77.8% 0.1721 287.6);
+      --violet-12: oklch(91.2% 0.0567 287.6);
+
+      --violet-a1: color(display-p3 0 0 0.9922 / 0.051);
+      --violet-a2: color(display-p3 0.3098 0.2314 1 / 0.097);
+      --violet-a3: color(display-p3 0.3804 0.2627 1 / 0.24);
+      --violet-a4: color(display-p3 0.4039 0.2588 1 / 0.349);
+      --violet-a5: color(display-p3 0.4314 0.3059 1 / 0.412);
+      --violet-a6: color(display-p3 0.4667 0.3686 1 / 0.471);
+      --violet-a7: color(display-p3 0.498 0.4157 1 / 0.568);
+      --violet-a8: color(display-p3 0.5176 0.4275 1 / 0.711);
+      --violet-a9: color(display-p3 0.4471 0.2824 1 / 0.824);
+      --violet-a10: color(display-p3 0.4235 0.2039 1 / 0.753);
+      --violet-a11: color(display-p3 0.7098 0.6706 1 / 0.975);
+      --violet-a12: color(display-p3 0.8863 0.8784 1 / 0.988);
+
+      --violet-contrast: #fff;
+      --violet-surface: color(display-p3 0.1098 0.0941 0.2431 / 0.5);
+      --violet-indicator: oklch(50.9% 0.2276 287.6);
+      --violet-track: oklch(50.9% 0.2276 287.6);
+      
+      /* Gray P3 colors */
+      --gray-1: oklch(9.1% 0.0371 286.4);
+      --gray-2: oklch(20% 0.0355 286.4);
+      --gray-3: oklch(24.8% 0.0481 286.4);
+      --gray-4: oklch(28.1% 0.0661 286.4);
+      --gray-5: oklch(31.2% 0.0779 286.4);
+      --gray-6: oklch(34.9% 0.0875 286.4);
+      --gray-7: oklch(40.1% 0.106 286.4);
+      --gray-8: oklch(49.2% 0.1313 286.4);
+      --gray-9: oklch(54% 0.1313 286.4);
+      --gray-10: oklch(58.6% 0.1313 286.4);
+      --gray-11: oklch(77% 0.1218 286.4);
+      --gray-12: oklch(94.9% 0.0227 286.4);
+
+      --gray-a1: color(display-p3 0.0118 0.0078 0.0039 / 0.154);
+      --gray-a2: color(display-p3 0.7843 0.7412 0.9922 / 0.096);
+      --gray-a3: color(display-p3 0.6941 0.6667 0.9961 / 0.166);
+      --gray-a4: color(display-p3 0.6039 0.5725 1 / 0.236);
+      --gray-a5: color(display-p3 0.5608 0.5059 1 / 0.306);
+      --gray-a6: color(display-p3 0.6 0.5373 1 / 0.352);
+      --gray-a7: color(display-p3 0.5843 0.5255 1 / 0.451);
+      --gray-a8: color(display-p3 0.5725 0.5216 1 / 0.616);
+      --gray-a9: color(display-p3 0.5961 0.5569 1 / 0.678);
+      --gray-a10: color(display-p3 0.6157 0.5843 1 / 0.74);
+      --gray-a11: color(display-p3 0.698 0.6784 1 / 0.972);
+      --gray-a12: color(display-p3 0.9412 0.9373 1 / 0.988);
+
+      --gray-contrast: #FFFFFF;
+      --gray-surface: color(display-p3 0 0 0 / 5%);
+      --gray-indicator: oklch(54% 0.1313 286.4);
+      --gray-track: oklch(54% 0.1313 286.4);
+      
+      --color-background: oklch(9.1% 0.0371 286.4);
+    }
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background, var(--gray-1));
+  color: white;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
+  transition: background-color 0.5s ease-in-out;
+}
+
+* {
+  @apply font-sans;
+}
+
+@layer base {
+  .dark {
+    @apply bg-slate-950 text-slate-100;
+  }
 }
