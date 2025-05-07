@@ -33,9 +33,7 @@ export function Hero() {
             </p>
             
             <div className="flex flex-col md:flex-row gap-4 mb-12">
-              <button className="px-8 py-3 rounded-xl bg-violet-9 hover:bg-violet-8 text-white font-medium transition-all duration-300 hover:shadow-[0_0_0_5px_rgba(103,60,221,0.4)]">
-                Launch Dapp
-              </button>
+              
               <Link 
                 href="https://echo-fun.gitbook.io/docs/" 
                 target="_blank" 
