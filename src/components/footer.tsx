@@ -157,7 +157,7 @@ export function Footer() {
                 </svg>
               </Link>
               <Link 
-                href="https://t.me/echo_fun" 
+                href="https://t.me/echo_fun_Official" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-gray-5 hover:bg-violet-9 text-white flex items-center justify-center transition-all duration-300 hover:shadow-[0_0_0_5px_rgba(103,60,221,0.4)]"
