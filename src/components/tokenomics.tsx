@@ -1,11 +1,9 @@
 import React from "react";
 
 const tokenAllocations = [
-  { category: "Fair Launch", percentage: 70 },
-  { category: "Community Fund & Prediction Rewards", percentage: 10 },
+  { category: "Fair Launch", percentage: 90 },
+  { category: "Community Fund & Prediction Rewards", percentage: 5 },
   { category: "DEX Liquidity", percentage: 5 },
-  { category: "Ecosystem Growth & Partnerships", percentage: 10 },
-  { category: "Team & Contributors", percentage: 5 }
 ];
 
 const tokenUtilities = [
@@ -80,4 +78,5 @@ export function Tokenomics() {
       </div>
     </section>
   );
+
 } 
