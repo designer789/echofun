@@ -166,7 +166,7 @@ export function Footer() {
                 <i className="fa-brands fa-telegram"></i>
               </Link>
               <Link 
-                href="https://www.dextools.io/app" 
+                href="https://www.dextools.io/app/base/pair-explorer/0x32c3e8009cb02733cc10f7c98d542d773305e98f" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-gray-5 hover:bg-violet-9 text-white flex items-center justify-center transition-all duration-300 hover:shadow-[0_0_0_5px_rgba(103,60,221,0.4)]"
@@ -181,7 +181,7 @@ export function Footer() {
                 </svg>
               </Link>
               <Link 
-                href="https://dexscreener.com" 
+                href="https://dexscreener.com/base/0x32c3e8009cb02733cc10f7c98d542d773305e98f" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-gray-5 hover:bg-violet-9 text-white flex items-center justify-center transition-all duration-300 hover:shadow-[0_0_0_5px_rgba(103,60,221,0.4)]"
@@ -209,4 +209,5 @@ export function Footer() {
     </footer>
   );
 } 
+
 
